@@ -4,6 +4,9 @@ This is a new [**React Native**](https://reactnative.dev) project using [`@react
 
 > Mobile React Native working with [**Hacker News**](https://github.com/HackerNews/API)
 
+- **Demo video: [**Hacker News App v1.0.1**](https://drive.google.com/file/d/1fX1HWUZTNRXk-tPhlcJqKuDS_UI_CocA/view?usp=sharing)
+- **App Test Android (APK): [**Hacker News App v1.0.1**](https://drive.google.com/file/d/1qPtejhYUvD69lpasIBbS-WBk-2tN_F-_/view?usp=sharing)
+
 ## ⚙️ Environment Setup
 
 Before running the project, you need to set up your development environment properly.

@@ -1,14 +1,13 @@
 import { resetTo } from '@core/services/navigation/navigation-action';
 import { myIcons } from 'assets';
-import { ERouteName } from 'enum/navigation.enum';
 import React, { useEffect } from 'react';
-import { SafeAreaView, StyleSheet, Image } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, Text } from 'react-native';
 
 function SplashScreen() {
 
     useEffect(() => {
         const timeOut = setTimeout(() => {
-            resetTo(ERouteName.Splash);
+            resetTo('MainDrawer');
             clearTimeout(timeOut);
         }, 500);
     }, []);
@@ -21,6 +20,7 @@ function SplashScreen() {
                 style={styles.logo}
                 resizeMode="contain"
             />
+            <Text style={styles.title}>Hacker News</Text>
         </SafeAreaView>
     );
 }
@@ -33,8 +33,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    title: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginTop: 6,
+    },
     logo: {
-        width: 200,
-        height: 200,
+        width: 64,
+        height: 64,
     },
 });

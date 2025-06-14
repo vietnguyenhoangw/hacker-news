@@ -5,6 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { screenTracking } from './navigation-action';
 import { CustomDrawerContent } from '@components/drawable/my-drawable';
 import { BestStoriesScreen, NewStoriesScreen, StoryDetailScreen, TopStoriesScreen } from '@screens/stories';
+import SplashScreen from '@screens/splash/splash-screen';
 
 export const navigationRef: any = React.createRef();
 
@@ -36,8 +37,9 @@ function DrawerNavigation() {
 function AppNavigation() {
     return (
         <NavigationContainer ref={navigationRef} onStateChange={screenTracking}>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="SplashScreen">
                 <Stack.Screen name="MainDrawer" component={DrawerNavigation} />
+                <Stack.Screen name="SplashScreen" component={SplashScreen} />
                 <Stack.Screen name="StoryDetailScreen" component={StoryDetailScreen} />
             </Stack.Navigator>
         </NavigationContainer>
